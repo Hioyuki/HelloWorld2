@@ -1,23 +1,70 @@
-# Networking Project: Python UDP/TCP Client-Server Communication
+Networking Project: Python UDP Client-Server Communication
+Overview
+Project Description
+As a software engineer focused on networking and security, I have developed a Client-Server Communication Tool using Python's native socket library. This project demonstrates a connectionless communication system using the UDP (User Datagram Protocol), enabling real-time data exchange between a MacBook (Client) and a Raspberry Pi (Server).
 
-## Overview
-This project demonstrates a Client-Server networking model using Python's `socket` library. It includes both TCP and UDP implementations to showcase the differences between connection-oriented and connectionless protocols.
+The system consists of two main components:
 
-## Networking Realization
-- **Model**: Client-Server
-- **Protocol**: UDP (and TCP as secondary)
-- **Message Structure**: Text-based commands (UTF-8 encoded)
+UDP Server (Raspberry Pi/Kali Linux): A backend that listens on a specific port (9999), parses incoming datagrams, and returns dynamic responses based on predefined logic.
 
-## Development Environment
-- **Language**: Python 3.12
-- **Hardware**: Raspberry Pi (Kali Linux) as Server, MacBook Air as Client
-- **Libraries**: `socket`, `datetime`, `random`
+Interactive UDP Client (macOS): A terminal-based interface that allows users to send requests and display responses received from the server.
 
-## Unique Requirements
-I have implemented the following additional requirement:
-- **Three different kinds of requests**: The server responds to "time", "lucky", and "help" commands with specific data processing.
+Purpose of the Project
+The primary goal of this project was to master the fundamentals of Network Programming (Socket API) and the OSI model. By building this from scratch, I aimed to:
 
-## How to Run
-1. **Server (Raspberry Pi)**:
-   ```bash
-   python3 udp_server.py
+Understand the core differences between TCP (connection-oriented) and UDP (connectionless) protocols.
+
+Implement data serialization and encoding/decoding (UTF-8) for network transit.
+
+Learn how to troubleshoot physical network layers, such as managing routing conflicts between Wi-Fi and Ethernet on a Raspberry Pi.
+
+Software Demo Video
+Software Demo Video
+
+Development Environment
+Tools & Infrastructure
+Hardware: MacBook Air (Client) & Raspberry Pi 4 (Server)
+
+Operating System: macOS / Kali Linux (Rolling)
+
+Network: Direct Ethernet Connection (Static IP: 192.168.2.3)
+
+Editor: Visual Studio Code / Nano
+
+Programming Language & Libraries
+Python 3.12:
+
+socket: For low-level network interface access (UDP implementation).
+
+datetime: For generating dynamic time-based responses.
+
+random: For processing "lucky number" requests.
+
+Networking Realization
+This project satisfies the following module requirements:
+
+Client-Server Model: Distinct programs for sender and receiver.
+
+Protocol: Implemented via UDP (socket.SOCK_DGRAM).
+
+Additional Feature: Support for 3 different kinds of requests:
+
+time: Returns the current server system time.
+
+lucky: Returns a randomly generated number from the server.
+
+help: Displays a list of available server commands.
+
+Useful Websites
+Python Documentation - Socket Programming
+
+Wikipedia - OSI Model
+
+Real Python - Socket Programming in Python
+
+Future Work
+Implement a Graphical User Interface (GUI) using Tkinter.
+
+Add End-to-End Encryption for the transmitted data.
+
+Transition to a Peer-to-Peer (P2P) model for file sharing.
