@@ -16,7 +16,7 @@ The primary goal of this project was to master the fundamentals of **Network Pro
 * Learn how to troubleshoot physical network layers, such as managing routing conflicts between Wi-Fi and Ethernet on a Raspberry Pi.
 
 ### Software Demo Video
-[Software Demo Video](あなたの動画リンクをここに貼り付けてください)
+[Software Demo Video](https://youtu.be/eOVef9qlVGs)
 
 ---
 
